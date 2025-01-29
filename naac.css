@@ -1,0 +1,921 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Roboto, sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+
+}
+
+html {
+  overflow-x: hidden;
+}
+
+nav .navigation1 a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease-in;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  /* Ensure it stays above other content */
+}
+
+nav .navigation1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+}
+
+nav .navigation2 {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+}
+
+.strip-container {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+}
+
+
+
+nav .navigation1 a {
+  text-decoration: none;
+  /* Removes default underline */
+  position: relative;
+  /* Enables positioning for the pseudo-element */
+  color: white;
+  /* Sets the text color */
+}
+
+nav .navigation1 a::after {
+  content: "";
+  /* Adds an empty pseudo-element */
+  position: absolute;
+  /* Position it relative to the anchor */
+  left: 0;
+  bottom: -2px;
+  /* Adjusts the space below the text */
+  width: 0;
+  /* Initially, the underline is invisible */
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: #ffffff;
+  /* Color of the underline */
+  transition: width 0.3s ease;
+  /* Smooth underline animation */
+}
+
+nav .navigation1 a:hover::after {
+  width: 100%;
+  /* Expands the underline when hovered */
+}
+
+nav .navigation1 a:hover {
+  color: #ff8622;
+}
+
+nav {
+  position: fixed;
+}
+
+nav .navigation1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+  gap: 1.3rem;
+  padding-right: 20px;
+  padding-top: 10px;
+  width: 100%;
+  height: 40px;
+  text-decoration: solid;
+  font-weight: bolder;
+  font-family: sans-serif;
+  background-color: #114ab1;
+  color: white;
+}
+
+nav .navigation2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  height: 75px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  background-color: white;
+
+  padding: 0 5%;
+
+}
+
+nav .navigation2 .options ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: flex-end;
+  gap: 1.1rem;
+  padding-right: 20px;
+
+  list-style: none;
+
+}
+
+@media (max-width: 945px) {
+  nav .navigation2 .options ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+    justify-content: flex-end;
+    gap: 1.1rem;
+    padding-right: 20px;
+
+
+  }
+}
+
+nav .navigation2 .options ul li {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  line-height: 80px;
+
+}
+
+nav .navigation2 .options ul li a {
+  text-decoration: none;
+  color: rgb(27, 26, 26);
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s ease-in;
+
+
+}
+
+
+nav .navigation2 .options ul li a i {
+
+  color: #000;
+  margin-left: 10px;
+}
+
+
+nav .navigation2 .options ul li a {
+  text-decoration: none;
+  /* Removes default underline */
+  position: relative;
+  /* Enables positioning for the pseudo-element */
+  color: #000;
+  /* Sets the text color */
+}
+
+nav .navigation2 .options ul li a::after {
+  content: "";
+  /* Adds an empty pseudo-element */
+  position: absolute;
+  /* Position it relative to the anchor */
+  left: 0;
+  bottom: -2px;
+  /* Adjusts the space below the text */
+  width: 0;
+  /* Initially, the underline is invisible */
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: #000;
+  /* Color of the underline */
+  transition: width 0.3s ease;
+  /* Smooth underline animation */
+}
+
+nav .navigation2 .options ul li a:hover::after {
+  width: 100%;
+  /* Expands the underline when hovered */
+}
+
+nav .navigation2 .options ul li a:hover {
+  color: #0e804b;
+}
+
+
+nav .navigation2 .logo-ait img {
+  height: 70px;
+  width: 74px;
+}
+
+
+
+@media (max-width: 970px) {
+  nav .navigation2 .logo-ait img {
+
+    height: 60px;
+    width: 64px;
+  }
+}
+
+
+@media (max-width: 1043px) {
+  nav .navigation2 .first-full-div p {
+
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  nav .navigation2 .options ul li a {
+
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 881px) {
+  nav .navigation2 .options ul li a {
+
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Basic styles */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+
+}
+
+.nav-links li {
+  margin: 0px;
+  font-size: 2rem;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+}
+
+/* Menu button for mobile */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 945px) {
+  .options {
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    height: 600px;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+
+  }
+
+
+
+  .options.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links li {
+
+    text-align: center;
+  }
+}
+
+.first-full-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  color: #002e85;
+  font-weight: bolder;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+}
+
+.strip-container {
+  width: 100%;
+  overflow: hidden;
+  /* Hides content outside the container */
+  background-color: #eee3e3;
+
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  height: 43px;
+  /* Adjust the height as needed */
+
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.strip {
+
+  display: inline-block;
+  white-space: nowrap;
+  /* Ensures the content stays in one line */
+  position: absolute;
+  animation: scroll-strip 34s linear infinite;
+  /* Controls scrolling */
+}
+
+.strip span {
+  margin-right: 50px;
+  /* Spacing between items */
+  font-size: 18px;
+  /* Adjust font size as needed */
+  color: #353333;
+  padding-bottom: 10px;
+}
+
+/* Duplicate the strip content to create a continuous flow */
+.strip span:nth-child(n + 1) {
+  animation: scroll-strip 4s linear infinite;
+}
+
+@keyframes scroll-strip {
+  0% {
+    transform: translateX(10%);
+    /* Start off-screen to the right */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* End off-screen to the left */
+  }
+}
+
+.strip-container1 {
+  width: 100%;
+  overflow: hidden;
+  /* Hides content outside the container */
+  background-color: #ffffff;
+
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  height: 100vh;
+  /* Adjust the height as needed */
+
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.strip1 {
+  /* display: inline-block; */
+  display: inline-block;
+  white-space: nowrap;
+  /* Ensures the content stays in one line */
+  position: absolute;
+  animation: scroll-strip 34s linear infinite;
+  /* Controls scrolling */
+}
+
+.strip1 .img {
+  margin-right: 0px;
+  /* Spacing between items */
+  font-size: 18px;
+  /* Adjust font size as needed */
+  color: #353333;
+  padding-bottom: 10px;
+}
+
+/* Duplicate the strip content to create a continuous flow */
+.strip1 span:nth-child(n + 1) {
+  animation: scroll-strip 4s linear infinite;
+}
+
+@keyframes scroll-strip1 {
+  0% {
+    transform: translateX(10%);
+    /* Start off-screen to the right */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* End off-screen to the left */
+  }
+}
+
+
+
+#home {
+
+
+  background-image: linear-gradient(rgba(9, 9, 54, 0.3), rgba(5, 4, 46, 0.3)),
+    url(Vikas_ait.jpg);
+
+  width: 100vw;
+
+  height: 620px;
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+  text-align: center;
+
+  padding-top: 70px;
+}
+
+#home h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 1 px;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Clickable Options Container */
+.clickable-options-container {
+
+  left: 20px;
+  max-width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.options-toggle {
+  display: none;
+  /* Hidden by default */
+  background-color: #0078d7;
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+.clickable-options {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  width: 300px;
+
+  height: 550px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.clickable-options a {
+  text-decoration: none;
+  background-color: #0078d7;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5px;
+  display: block;
+  transition: background-color 0.3s ease;
+  height: 60px;
+  width: 240px;
+  margin-top: 30px;
+
+}
+
+.clickable-options a:hover {
+  background-color: #005bb5;
+}
+
+.clickable-options a:active {
+  background-color: #003f8a;
+}
+
+
+
+.expandable-div.expanded {
+  flex: 1 1 100%;
+  background-color: #0078d7;
+  color: white;
+}
+
+/* Responsive Options */
+@media (max-width: 727px) {
+  .clickable-options {
+    display: none;
+    /* Hide options by default on small screens */
+  }
+
+  .options-toggle {
+    display: block;
+    /* Show toggle button on small screens */
+  }
+
+  .clickable-options-container.active .clickable-options {
+    display: flex;
+    /* Show options when container is active */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.forms {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.forms .all-forms {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+  width: 650px;
+  margin-right: 10PX;
+}
+
+@media (max-width:550px) {
+  .forms .all-forms {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 0px;
+    width: 600px;
+  }
+
+}
+
+.forms .all-forms .f1 {
+
+  box-shadow: 2px 2px 10px rgba(181, 175, 175, 0.927);
+  border-radius: 28px;
+  height: 100px;
+  padding: 15px;
+  padding-top: 37px;
+
+  display: flex;
+
+}
+
+.forms .all-forms h1 {
+
+  color: #003f8a;
+}
+
+.forms .all-forms .f2 {
+
+  box-shadow: 2px 2px 10px rgba(181, 175, 175, 0.927);
+  border-radius: 28px;
+  height: max-content;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.forms .all-forms .f1 h2 {
+
+  color: #003f8a;
+  text-decoration: none;
+
+}
+
+
+.forms .all-forms .f1 h3 a {
+
+  text-decoration: none;
+  color: #003f8a;
+  transition: 0.3s ease-in-out;
+}
+
+
+.forms .all-forms .f2 h3 a {
+
+  text-decoration: none;
+  color: #0078d7;
+  transition: 0.3s ease-in-out;
+}
+
+.forms .all-forms .f2 h3 a:hover {
+
+  color: #002e85;
+}
+
+
+.forms .all-forms .f1 h3 a:hover {
+  color: #002e85;
+
+}
+
+.forms .all-forms .f2 h2 {
+
+  color: #003f8a;
+  text-decoration: none;
+
+}
+
+
+
+.footer {
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  font-family: Roboto, sans-serif;
+
+  display: flex;
+
+  unicode-bidi: isolate;
+
+  padding-top: 30px;
+  width: 100%;
+
+  color: #777777;
+
+  background-color: #222222;
+
+
+  align-items: center;
+
+  align-content: center;
+
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+
+
+
+}
+
+.c11 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 216px;
+  height: 268px;
+}
+
+.c1 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 285px;
+  height: 373px;
+  margin-top: 20px;
+
+
+}
+
+
+.c22 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 216px;
+  height: 268px;
+}
+
+.c2 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 285px;
+  height: 373px;
+}
+
+
+
+.c33 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 216px;
+  height: 268px;
+}
+
+.c3 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 285px;
+  height: 373px;
+}
+
+
+
+.c44 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 320px;
+  height: 268px;
+}
+
+.c44 a i {
+
+
+
+  border: 12px solid #222222;
+
+  border-width: px;
+
+  color: #3fd2c7;
+  font-size: 25px;
+  transition: 0.3s ease-in;
+
+
+}
+
+.c44 a i:hover {
+  color: #fdc93b;
+
+}
+
+.c4 {
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+  width: 285px;
+  height: 450px;
+
+  margin-top: 75Spx;
+}
+
+.c4 p {
+
+  width: 100%;
+}
+
+.footer li a {
+
+  text-decoration: none;
+
+
+
+  font-style: italic;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  text-shadow: #777777;
+
+  font-size: 15px;
+  color: #777777;
+  transition: 0.3s ease-in;
+
+
+
+
+
+}
+
+.footer li a:hover {
+
+  color: hsl(214, 89%, 48%);
+
+
+
+}
+
+.footer h6 {
+
+  color: #757373;
+}
+
+.footer i {
+
+  color: hsl(214, 89%, 48%);
+}
+
+.footer p i {
+
+  color: red;
+}
+
+.footer h2 {
+
+  font-family: Raleway, sans-serif;
+
+  font-size: 22px;
+}
+
+
+
+.footer li {
+
+  margin-top: 10px;
+
+  font-family: Roboto, sans-serif;
+}
+
+.updation a {
+
+  text-decoration: none;
+  color: #999999;
+  font-size: 15px;
+
+
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+
+}
